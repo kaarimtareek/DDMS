@@ -1,0 +1,6 @@
+@DDMS.Gateway_HostAddress = http://localhost:5092
+
+GET {{DDMS.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,66 @@
+﻿services:
+  approval.service:
+    image: approval.service
+    build:
+      context: .
+      dockerfile: Approval.Service/Dockerfile
+    ports:
+      - "6061:6061"
+
+
+  users.service:
+    image: users.service
+    build:
+      context: .
+      dockerfile: Users.Service/Dockerfile
+    ports:
+      - "6067:6067"
+
+
+  search.service:
+    image: search.service
+    build:
+      context: .
+      dockerfile: Search.Service/Dockerfile
+    ports:
+      - "6066:6066"
+
+  notifications.service:
+    image: notifications.service
+    build:
+      context: .
+      dockerfile: Notifications.Service/Dockerfile
+    ports:
+      - "6065:6065"
+
+  documents.service:
+    image: documents.service
+    build:
+      context: .
+      dockerfile: Documents.Service/Dockerfile
+    ports:
+      - "6063:6063"
+
+  ddms.gateway:
+    image: ddms.gateway
+    build:
+      context: .
+      dockerfile: DDMS.Gateway/Dockerfile
+    ports:
+      - "6060:6060"
+
+  auditlog.service:
+    image: auditlog.service
+    build:
+      context: .
+      dockerfile: AuditLog.Service/Dockerfile
+    ports:
+      - "6062:6062"
+
+  fileprocessor.service:
+    image: fileprocessor.service
+    build:
+      context: .
+      dockerfile: FileProcessor.Service/Dockerfile
+    ports:
+      - "6064:6064"
